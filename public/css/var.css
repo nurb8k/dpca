@@ -1,0 +1,16 @@
+:root {
+    --body-padding: 10px;
+
+    --news-max-width: calc(1392px + calc( var(--body-padding) * 2 ));
+    --cabinet-max-width: calc(1314px + calc( var(--body-padding) * 2 ));
+
+    --color-active: #0059c8;
+    --color-deactive: #518cd5;
+    --color-active-dark: #004AAB;
+    --color-background: #E5EEF9;
+
+    --color-input: #8FB7EC;
+
+    --border-radius-min: 2px;
+    --border-radius-max: 6px;
+}
