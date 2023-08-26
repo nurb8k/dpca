@@ -59,7 +59,7 @@
         </div>
         <div class="service-item">
             <div class="service-head">
-                <p class="service-head-text">Как мы помогаем</p>
+                <p class="service-head-text">Преимущество</p>
                 <img src="{{asset('images/service_images/img.png')}}" alt="" class="service-head-img">
             </div>
             <div class="service-end">
@@ -71,7 +71,7 @@
         </div>
         <div class="service-item">
             <div class="service-head">
-                <p class="service-head-text">Как мы помогаем</p>
+                <p class="service-head-text">Разработка под ключ</p>
                 <img src="{{asset('images/service_images/img_1.png')}}" alt="" class="service-head-img">
             </div>
             <div class="service-end">
@@ -83,7 +83,7 @@
         </div>
         <div class="service-item">
             <div class="service-head">
-                <p class="service-head-text">Как мы помогаем</p>
+                <p class="service-head-text">Стоимость</p>
                 <img src="{{asset('images/service_images/img_2.png')}}" alt="" class="service-head-img">
             </div>
             <div class="service-end">
@@ -146,24 +146,24 @@
     <div class="news-recommend-items">
 
         <div class="news-recommend-item">
-            <img src="{{asset('images/news_details_images/rec1.png')}}" alt="" class="news-recommend-item-img">
+            <img src="{{ asset('images/news_details_images/rec1.png')}}" alt="" class="news-recommend-item-img">
             <div class="news-recommend-item-date">11 Декабря 2022</div>
-            <a href="" class="news-recommend-item-title">Crossref усиливает контроль за качеством метаданных для научных изданий: что это означает для издателей в Центральной Азии</a>
+            <a href="#" class="news-recommend-item-title">Crossref усиливает контроль за качеством метаданных для научных изданий: что это означает для издателей в Центральной Азии</a>
         </div>
         <div class="news-recommend-item">
-            <img src="{{asset('images/news_details_images/rec2.png')}}" alt="" class="news-recommend-item-img">
+            <img src="{{ asset('images/news_details_images/rec2.png')}}" alt="" class="news-recommend-item-img">
             <div class="news-recommend-item-date">4 Декабря 2022</div>
-            <a href="" class="news-recommend-item-title">DOI становится стандартом для научных журналов в Республике Казахстан: какие преимущества это дает</a>
+            <a href="#" class="news-recommend-item-title">DOI становится стандартом для научных журналов в Республике Казахстан: какие преимущества это дает</a>
         </div>
         <div class="news-recommend-item">
-            <img src="{{asset('images/news_details_images/rec3.png')}}" alt="" class="news-recommend-item-img">
+            <img src="{{ asset('images/news_details_images/rec3.png')}}" alt="" class="news-recommend-item-img">
             <div class="news-recommend-item-date">8 Декабря 2022</div>
-            <a href="" class="news-recommend-item-title">OJS становится все более популярным среди научных журналов в Центральной Азии</a>
+            <a href="#" class="news-recommend-item-title">OJS становится все более популярным среди научных журналов в Центральной Азии</a>
         </div>
         <div class="news-recommend-item">
-            <img src="{{asset('images/news_details_images/rec4.png')}}" alt="" class="news-recommend-item-img">
+            <img src="{{ asset('images/news_details_images/rec4.png')}}" alt="" class="news-recommend-item-img">
             <div class="news-recommend-item-date">9 Декабря 2022</div>
-            <a href="" class="news-recommend-item-title">Оценка цитируемости научных журналов: новые индексы и методы расчета</a>
+            <a href="#" class="news-recommend-item-title">Оценка цитируемости научных журналов: новые индексы и методы расчета</a>
         </div>
 
     </div>
