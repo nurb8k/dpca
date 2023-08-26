@@ -3,22 +3,13 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth2\AuthController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
-*/
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('/', function () {
     return view('home');
 });
 Route::get('/test',function (){
-   return view('test');
+    return view('test');
 });
 
 Route::get('/news', function () {
@@ -47,7 +38,13 @@ Route::get('/pricing', function () {
 
 
 //Auth::routes();
+
+
+
+//Route::middleware('guest')->group(function () {
 Route::post('/register', [AuthController::class, 'register'])->name('register');
+//});
+
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
