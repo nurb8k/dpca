@@ -52,7 +52,7 @@
             </div>
 
             <div class="modal-recaptcha">
-                <img src="./google.png" alt="">
+
                 <!-- GOOGLE RECAPTCHA -->
             </div>
 

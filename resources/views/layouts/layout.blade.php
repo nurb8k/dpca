@@ -74,10 +74,17 @@
                 </div>
             @endguest
             @auth
+                <div class="navbar__end--account">
+                    <img class="navbar__end--account-logo" src="{{asset('images/logos/user.png')}}" alt="user">
+                    <a href="{{route('profile')}}"  class="navbar__end--link">Аккаунт</a>
+                </div>
                 <form action="{{route('logout')}}" method="post">
                     @csrf
                     @method('POST')
-                    <button type="submit" style="background: none;border: none;cursor: pointer" class="navbar__end--link">Выйти</button>
+                    <div class="navbar__end--logout">
+                        <button type="submit" style="background: none;border: none;cursor: pointer" class="navbar__end--link">Выход</button>
+                        <img class="navbar__end--logout--logo" src="{{asset('images/logos/logout.png')}}" alt="logout">
+                    </div>
                 </form>
             @endauth
 
@@ -169,7 +176,6 @@
             <input type="text" class="ui-input modal-login-input" placeholder="Напишите вашу почту">
 
             <div class="modal-recaptcha">
-                <img src="./google.png" alt="">
                 <!-- GOOGLE RECAPTCHA -->
             </div>
 

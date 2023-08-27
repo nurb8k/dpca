@@ -111,7 +111,25 @@
     display: flex;
     align-items: center;
 }
+.navbar__end--account {
+    display: flex;
+    align-items: center;
+}
+.navbar__end--logout {
+    display: flex;
+    align-items: center;
+}
+.navbar__end--logout--logo {
+    width: 18px;
+    margin-left: 6px;
+    height: 18px;
+}
+.navbar__end--account-logo {
+    width: 17px;
+    height: 17px;
+    margin-right: 9px;
 
+}
 .search--form {
     display: flex;
     align-items: center;
@@ -1171,3 +1189,103 @@ footer {
      }
  }
 
+
+ .cabinet-info-block {
+     display: grid;
+     grid-template-columns: minmax(100px, 612px) 450px;
+     gap: 30px;
+     justify-content: space-between;
+     flex-wrap: wrap;
+ }
+ .cabinet-info-title {
+     font-family: 'Lato', sans-serif;
+     font-size: 20px;
+     margin-bottom: 28px;
+ }
+ .cabinet-info-personal-ul {
+     display: flex;
+     flex-direction: column;
+     gap: 32px;
+     font-family: 'Raleway', sans-serif;
+     color: #3a3a3a;
+ }
+ .cabinet-info-personal-li {
+     display: flex;
+     justify-content: space-between;
+     padding: 10px 26px;
+     background: var(--color-background);
+     font-size: 16px;
+ }
+ .cabinet-info-personal-li span:first-child {
+     font-weight: 700;
+ }
+ .cabinet-info-personal-li span:last-child {
+     font-weight: 600;
+ }
+ .cabinet-personal-manager {
+     max-width: 480px;
+     font-family: 'Raleway', sans-serif;
+     font-size: 16px;
+ }
+ .cabinet-personal-manager-block {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: #3a3a3a;
+ }
+ .cabinet-personal-manager-img {
+     max-width: 230px;
+     width: 170px;
+     height: auto;
+ }
+ .cabinet-personal-manager-info {
+     display: flex;
+     flex-direction: column;
+     gap: 30px;
+     min-width: 262px;
+ }
+ .cabinet-personal-manager-info-item {
+     display: flex;
+     justify-content: space-between;
+ }
+ .cabinet-personal-manager-info-item span:first-child {
+     font-weight: 700;
+ }
+ .cabinet-personal-manager-info-item span:last-child {
+     font-weight: 600;
+ }
+ @media screen and (min-width: 1024px) {
+     .cabinet-info-block {
+         grid-template-columns: minmax(100px, 612px) 450px;
+     }
+     .cabinet-info-personal {
+         max-width: 612px;
+     }
+ }
+ @media screen and (max-width: 1023px) {
+     .cabinet-info-block {
+         grid-template-columns: 1fr;
+     }
+ }
+ @media screen and (max-width: 512px) {
+     .cabinet-info-personal-ul {
+         gap: 8px;
+     }
+     .cabinet-info-personal-li {
+         flex-direction: column;
+         gap: 4px;
+         padding: 10px 12px;
+     }
+     .cabinet-personal-manager-block {
+         flex-direction: column;
+         align-items: baseline;
+     }
+     .cabinet-personal-manager-img {
+         margin: 0 auto;
+     }
+     .cabinet-personal-manager-info {
+         margin-top: 20px;
+         gap: 12px;
+         width: 100%;
+     }
+ }
