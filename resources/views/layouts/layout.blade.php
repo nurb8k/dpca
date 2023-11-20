@@ -31,7 +31,7 @@
         <div class="navbar__head--links">
             <a class="navbar__head--link" href="#">Заявки DOI</a>
             <a class="navbar__head--link" href="#">Ресурсы</a>
-            <a class="navbar__head--link" href="{{route('news')}}">Новости</a>
+            <a class="navbar__head--link" href="{{route('news.index')}}">Новости</a>
             <a class="navbar__head--link" href="#">Научные журналы</a>
             <a class="navbar__head--link" href="#">Контакты</a>
         </div>
@@ -82,10 +82,11 @@
                     @csrf
                     @method('POST')
                     <div class="navbar__end--logout">
-                        <button type="submit" style="background: none;border: none;cursor: pointer" class="navbar__end--link">Выход</button>
+                        <button type="submit" style="background: none;cursor: pointer" class="navbar__end--link logout_btn">{{ __('Register') }}</button>
                         <img class="navbar__end--logout--logo" src="{{asset('images/logos/logout.png')}}" alt="logout">
                     </div>
                 </form>
+                {{ now()->isoFormat('dddd, D MMMM YYYY') }}
             @endauth
 
         </div>
@@ -128,7 +129,7 @@
             </div>
 
             <div class="modal-recaptcha">
-                GOOGLE RECAPTCHA
+                <div class="g-recaptcha" data-sitekey="6LcGE94nAAAAAAkcZQsMN0tLZ0DpX704CMYczwB-"></div>
             </div>
 
             <input type="submit" class="ui-btn modal-login-btn" value="Зарегистрироваться">
@@ -158,7 +159,7 @@
             </div>
 
             <div class="modal-recaptcha">
-                google captcha
+                <div class="g-recaptcha" data-sitekey="6LcGE94nAAAAAAkcZQsMN0tLZ0DpX704CMYczwB-"></div>
             </div>
 
             <input type="submit" class="ui-btn modal-login-btn" value="Войти">
@@ -176,7 +177,7 @@
             <input type="text" class="ui-input modal-login-input" placeholder="Напишите вашу почту">
 
             <div class="modal-recaptcha">
-                <!-- GOOGLE RECAPTCHA -->
+                <div class="g-recaptcha" data-sitekey="6LcGE94nAAAAAAkcZQsMN0tLZ0DpX704CMYczwB-"></div>
             </div>
 
             <input type="submit" class="ui-btn modal-login-btn" value="Восстановить пароль">

@@ -12,7 +12,7 @@
             </div>
             <ul class="cabinet-menu js-cabinet-menu justify-content-none ">
                 <li class="cabinet-menu-item mr-4 cabinet-menu-item__active">
-                    <a href="#"  data-tab="tab1">Пакет "Стартовый"</a>
+                    <a href="#" data-tab="tab1">Пакет "Стартовый"</a>
                 </li>
                 <li class="cabinet-menu-item mr-4">
                     <a href="#" data-tab="tab2">Пакет “Продвинутый”</a>

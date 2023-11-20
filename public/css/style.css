@@ -42,15 +42,21 @@
     justify-content: space-between;
     width: 60%;
 }
+
 .navbar__head--contact {
     width: 20%;
 }
 .navbar__head--contact--phone {
     display: flex;
     align-content: center;
-    margin-left: 50px;
+    margin-left: 20px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
+    padding: 20px 0;
+    border-radius: 8px;
+}
+.navbar__head--contact--phone:hover {
+    background-color: #2db74c;
 }
 .navbar__head--contact--text {
     color: white;
@@ -71,6 +77,11 @@
     text-transform: uppercase;
     word-wrap: break-word
 }
+
+ .navbar__head--link:hover {
+    transition: 0.4s;
+    border-bottom: 2px solid #9fcdff;
+ }
 
 .navbar__end--languages {
     display: flex;
@@ -93,6 +104,10 @@
     font-weight: 500;
     line-height: 33px;
     word-wrap: break-word
+}
+.navbar__end--link:hover {
+    transition: 0.4s;
+    border-bottom: 2px solid var(--color-background) ;
 }
 
 .navbar__end--vl {
@@ -707,6 +722,7 @@ footer {
     color: white;
 }
 
+
 .footer__element {
     margin-right: 150px;
 }
@@ -1288,4 +1304,53 @@ footer {
          gap: 12px;
          width: 100%;
      }
+ }
+
+ .logout_btn {
+     border: none;
+ }
+
+ .logout_btn:hover {
+     font-weight: bold;
+     color: #f31919;
+ }
+ .cabinet-password {
+     max-width: 826px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+ .cabinet-password .cabinet-section-title {
+     text-align: center;
+ }
+ .change-password-form {
+     max-width: 560px;
+     margin-left: auto;
+     margin-right: auto;
+     font-family: 'Roboto', sans-serif;
+ }
+ .change-password-form label {
+     display: block;
+     font-size: 16px;
+     margin-bottom: 8px;
+ }
+ .change-password-form .change-password-input {
+     position: relative;
+     margin-bottom: 44px;
+ }
+ .change-password-form .change-password-input input {
+     width: 100%;
+ }
+ .change-password-show {
+     position: absolute;
+     top: 0;
+     right: 0;
+     height: 100%;
+     width: 40px;
+     cursor: pointer;
+     background-image: url("./Hide.png");
+     background-repeat: no-repeat;
+     background-position: center center;
+ }
+ .change-password-submit {
+     margin: 0 auto;
  }

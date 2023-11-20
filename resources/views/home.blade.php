@@ -10,10 +10,9 @@
 
 
 <div class="slideshow-container">
-
     <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
-        <img src="{{asset('carousel_images/1.png')}}" style="width:100%">
+        <img src="{{ asset('carousel_images/1.png')}}" style="width:100%">
         <div class="text">
             <p class="text__black">поддержка</p>
             <p class="text__blue">цифровых публикации</p>
@@ -167,7 +166,7 @@
         </div>
 
     </div>
-    <a href="{{route('news')}}" class="news-recommend-btn">Все новости
+    <a href="{{route('news.index')}}" class="news-recommend-btn">Все новости
         <svg class="news-recommend-arrow" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 1L11 11L1 1" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>

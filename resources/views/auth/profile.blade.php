@@ -12,29 +12,29 @@
 
             <ul class="cabinet-menu js-cabinet-menu">
                 <li class="cabinet-menu-item cabinet-menu-item__active">
-                    <a href="{{route('profile')}}">Общая информация</a>
+                    <a href="{{route('profile')}}" data-tab="acc_info">Общая информация</a>
                 </li>
                 <li class="cabinet-menu-item">
-                    <a href="">Смена пароля</a>
+                    <a href="#" data-tab="change_pw" >Смена пароля</a>
                 </li>
                 <li class="cabinet-menu-item">
-                    <a href="">История заказов</a>
+                    <a href="#" data-tab="order_ht">История заказов</a>
                 </li>
                 <li class="cabinet-menu-item">
-                    <a href="">Бухгалтерские документы</a>
+                    <a href="#" data-tab="acc_docs">Бухгалтерские документы</a>
                 </li>
                 <li class="cabinet-menu-item">
-                    <a href="../cabinet-materials/ojs.html">Полезные материалы</a>
+                    <a href="#" data-tab="materials">Полезные материалы</a>
                 </li>
                 <li class="cabinet-menu-item">
-                    <a href="">Выход</a>
+                    <a href="#">Выход</a>
                 </li>
             </ul>
 
         </div>
 
         <!-- Личный кабинет - Общая информация -->
-        <section class="cabinet-info cabinet-section">
+        <section id="acc_info" class="cabinet-info cabinet-section">
             <h2 class="cabinet-section-title">Общая информация</h2>
             <div class="cabinet-info-block">
 
@@ -89,9 +89,60 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </section>
-    </main>
+        <section id="change_pw" class="cabinet-info cabinet-section">
+            <h2 class="cabinet-section-title">Смена парола</h2>
+            <form action="change-password-form" class='change-password-form'>
+                <label for="current-password">Пароль</label>
+                <div class="change-password-input">
+                    <input class="ui-input" type="password" id="current-password" name="current-password" required>
+                    <div class="change-password-show" onclick='togglePasswordVisibility("current-password")'></div>
+                </div>
 
+                <label for="new-password">Новый пароль</label>
+                <div class="change-password-input">
+                    <input class="ui-input" type="password" id="new-password" name="new-password" required>
+                    <div class="change-password-show" onclick='togglePasswordVisibility("new-password")'></div>
+                </div>
+
+                <label for="confirm-password">Подтвердить пароль</label>
+                <div class="change-password-input">
+                    <input class="ui-input" type="password" id="confirm-password" name="confirm-password" required>
+                    <div class="change-password-show" onclick='togglePasswordVisibility("confirm-password")'></div>
+                </div>
+
+                <input type="submit" value="Изменить пароль" class='ui-btn change-password-submit'>
+            </form></section>
+        <section id="order_ht" class="cabinet-info cabinet-section"> </section>
+        <section id="acc_docs" class="cabinet-info cabinet-section"> </section>
+        <section id="materials" class="cabinet-info cabinet-section"> </section>
+
+    </main>
+    <script>
+        const tabs = document.querySelectorAll(".cabinet-menu-item a");
+        const tabContents = document.querySelectorAll(".tab-content");
+
+        tabs.forEach(tab => {
+            tab.addEventListener("click", e => {
+                e.preventDefault();
+
+                tabs.forEach(t => t.parentElement.classList.remove("cabinet-menu-item__active"));
+                tab.parentElement.classList.add("cabinet-menu-item__active");
+
+                const targetTab = tab.getAttribute("data-tab");
+
+                tabContents.forEach(content => {
+                    if (content.id === targetTab) {
+                        content.classList.remove("d-none");
+
+                        content.classList.add("d-block");
+                    } else {
+                        content.classList.remove("d-block");
+                        content.classList.add("d-none");
+                    }
+                });
+            });
+        });
+    </script>
 @endsection
