@@ -29,34 +29,38 @@
             <img src="{{asset('images/logo.png')}}" alt="dpca logo">
         </a>
         <div class="navbar__head--links">
-            <a class="navbar__head--link" href="#">Заявки DOI</a>
-            <a class="navbar__head--link" href="#">Ресурсы</a>
-            <a class="navbar__head--link" href="{{route('news.index')}}">Новости</a>
-            <a class="navbar__head--link" href="#">Научные журналы</a>
-            <a class="navbar__head--link" href="#">Контакты</a>
+            <a class="navbar__head--link" href="#">{{__('DOI_REQUESTS')}}</a>
+            <a class="navbar__head--link" href="#">{{__('RESOURCES')}}</a>
+            <a class="navbar__head--link" href="{{route('news.index')}}">{{__('NEWS')}}</a>
+            <a class="navbar__head--link" href="#">{{__('SCIENTIFIC_JOURNALS')}}</a>
+            <a class="navbar__head--link" href="#">{{__('CONTACTS')}}</a>
         </div>
         <div class="navbar__head--contact">
             <div class="navbar__head--contact--phone">
                 <img class="navbar__head--contact--icon" src="{{asset('images/tel.png')}}" alt="phone">
-                <a class="navbar__head--contact--text" href="tel:+77273231300"> Связаться с нами </a>
+                <a class="navbar__head--contact--text" href="tel:+77273231300">{{__('CONTACT_US')}}</a>
             </div>
         </div>
     </div>
     <div class="navbar__end">
+
         <div class="navbar__end--languages">
-            <a href="#">KZ</a>
-            <a href="#">RU</a>
-            <a href="#">EN</a>
+            @foreach(config('app.available_locales') as $locale)
+                <a  href="{{ route(Route::currentRouteName(), array_merge(Route::current()->parameters(), ['locale' => $locale])) }}"
+                   class="lang-links {{ app()->getLocale() == $locale ? 'lang_active' : '' }}">
+                    {{ strtoupper($locale) }}
+                </a>
+            @endforeach
         </div>
         <div class="navbar__end--links">
             <div class="navbar__end--vl"></div>
-            <a href="{{route('help.index')}}" class="navbar__end--link">Как мы помогаем</a>
+            <a href="{{route('help.index')}}" class="navbar__end--link">{{__('HOW_WE_HELP')}}</a>
             <div class="navbar__end--vl"></div>
-            <a href="{{route('advantage')}}" class="navbar__end--link">Преимущество</a>
+            <a href="{{route('advantage')}}" class="navbar__end--link">{{__('BENEFIT')}}</a>
             <div class="navbar__end--vl"></div>
-            <a href="{{route('developing')}}" class="navbar__end--link">Разработка под ключ</a>
+            <a href="{{route('developing')}}" class="navbar__end--link">{{__('TURNKEY_DEVELOPMENT')}}</a>
             <div class="navbar__end--vl"></div>
-            <a href="{{route('pricing')}}" class="navbar__end--link">Стоимость</a>
+            <a href="{{route('pricing')}}" class="navbar__end--link">{{__('COST')}}</a>
 
             <div class="navbar__end--search">
                 <form class="search--form" action="#">
@@ -67,10 +71,10 @@
                 </form>
             </div>
             @guest
-                <a href="#" onclick="openModal('modal-reg')" class="navbar__end--link">Регистрация</a>
+                <a href="#" onclick="openModal('modal-reg')" class="navbar__end--link">{{__('register')}}</a>
                 <div class="navbar__end--login">
                     <img class="navbar__end--login--logo" src="{{asset('images/img.png')}}" alt="login">
-                    <a href="#" onclick="openModal('modal-login')" class="navbar__end--link">Вход</a>
+                    <a href="#" onclick="openModal('modal-login')" class="navbar__end--link">{{__('Login')}}</a>
                 </div>
             @endguest
             @auth
@@ -191,12 +195,12 @@
     <div class="footer__head">
         <img class="footer__head--logo footer__element" src="{{asset('images/logo.png')}}" alt="dpca logo">
         <ul class="footer__head--links footer__element">
-            <li> <a class="footer__head--link" href="#">Главная</a> </li>
-            <li> <a class="footer__head--link" href="#">Как мы помогаем</a> </li>
-            <li> <a class="footer__head--link" href="#">Преимущества</a> </li>
-            <li> <a class="footer__head--link" href="#">Разработка под ключ</a> </li>
-            <li> <a class="footer__head--link" href="#">Стоимость</a> </li>
-            <li> <a class="footer__head--link" href="#">Заявка DOI</a> </li>
+            <li> <a class="footer__head--link" href="#">{{__('home')}}</a> </li>
+            <li> <a class="footer__head--link" href="#">{{__('HOW_WE_HELP')}}</a> </li>
+            <li> <a class="footer__head--link" href="#">{{__('BENEFIT')}}</a> </li>
+            <li> <a class="footer__head--link" href="#">{{__('TURNKEY_DEVELOPMENT')}}</a> </li>
+            <li> <a class="footer__head--link" href="#">{{__('COST')}}</a> </li>
+            <li> <a class="footer__head--link" href="#">{{__('DOI_REQUESTS')}}</a> </li>
         </ul>
         <div class="footer__head--contact footer__element">
             <div class="footer__head--contact--phone">
@@ -218,7 +222,7 @@
         </div>
     </div>
     <div class="footer__end">
-        <p>Все права защищены {{\Carbon\Carbon::now()->format("Y")}}</p>
+        <p>{{__('footer.all_rights_reserved')}} {{\Carbon\Carbon::now()->format("Y")}}</p>
     </div>
 </footer>
 {{-- end footer --}}

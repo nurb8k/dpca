@@ -1,5 +1,21 @@
 {
-  "Register": "Регистрация",
+  "register": "Регистрация",
   "Login": "Вход",
-  "logout": "Выход"
+  "logout": "Выход",
+  "DOI_REQUESTS": "Заявки DOI",
+  "RESOURCES": "Ресурсы",
+  "NEWS": "Новости",
+  "SCIENTIFIC_JOURNALS": "Научные журналы",
+  "CONTACTS": "Контакты",
+  "CONTACT_US": "Связаться с нами",
+  "HOW_WE_HELP": "Как мы помогаем",
+  "BENEFIT": "Преимущество",
+  "TURNKEY_DEVELOPMENT": "Разработка под ключ",
+  "COST": "Стоимость",
+  "DIGITAL_PUBLICATIONS_SUBSCRIBE": "Поддержка цифровых публикаций по Центральной Азии",
+  "OJS_FOR_SCIENTIFIC_JOURNALS": "Сайты на OJS для научных журналов",
+  "FROM_DEVELOPMENT_TO_MAINTENANCE": "От разработки до поддержки",
+  "SUBMISSION_ISSN": "Получение ISSN для научных журналов",
+  "home": "Басты бет",
+  "footer.all_rights_reserved": "Все права защищены"
 }

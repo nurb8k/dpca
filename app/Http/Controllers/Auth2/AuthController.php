@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth2;
 
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -39,9 +40,9 @@ class AuthController extends Controller
             ]);
 
             Auth::login($user);
-            return redirect()->route('home');
+            return redirect(app()->getLocale() . RouteServiceProvider::HOME);
         }catch (\Exception $e ) {
-            dd($e->getMessage());
+            return back()->withErrors($e->getMessage());
         }
 
 

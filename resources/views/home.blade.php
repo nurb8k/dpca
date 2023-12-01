@@ -8,34 +8,71 @@
     }
 </style>
 
-
 <div class="slideshow-container">
     <div class="mySlides fade">
         <div class="numbertext">1 / 3</div>
-        <img src="{{ asset('carousel_images/1.png')}}" style="width:100%">
-        <div class="text">
-            <p class="text__black">поддержка</p>
-            <p class="text__blue">цифровых публикации</p>
-            <p class="text__black">по центральной Азии</p>
-        </div>
+        <img src="{{ asset('carousel_images/1.png')}}" style="width:100%; height: 600px">
+        @if(app()->currentLocale() == 'ru')
+            <div class="text">
+                <p class="text__black">поддержка</p>
+                <p class="text__blue">цифровых публикации</p>
+                <p class="text__black">по центральной Азии</p>
+            </div>
+        @elseif(app()->currentLocale() == 'kz')
+            <div class="text">
+                <p class="text__black">ЦИФРЛЫ БАСЫЛЫМДАРДЫ</p>
+                <p class="text__blue">ОРТА АЗИЯ БОЙЫНША ҚОЛДАУ</p>
+            </div>
+        @elseif(app()->currentLocale() == 'en')
+            <div class="text">
+                <p class="text__black">DIGITAL PUBLICATIONS ON </p>
+                <p class="text__blue">CENTRAL ASIA</p>
+            </div>
+        @endif
     </div>
 
     <div class="mySlides fade">
         <div class="numbertext">2 / 3</div>
-        <img src="{{asset('carousel_images/2.png')}}" style="width:100%">
-        <div class="text">
-            <p class="text__black">Получение</p>
-            <p class="text__blue">ISSN для научных журналов</p>
-        </div>
+        <img src="{{asset('carousel_images/2.png')}}" style="width:100%; height: 600px">
+        @if(app()->currentLocale() == 'ru')
+            <div class="text">
+                <p class="text__black">Получение</p>
+                <p class="text__blue">ISSN для научных журналов</p>
+            </div>
+        @elseif(app()->currentLocale() == 'kz')
+            <div class="text">
+                <p class="text__black">ISSN</p>
+                <p class="text__blue"> ҒЫЛЫМИ ЖУРНАЛДАРҒА</p>
+            </div>
+        @elseif(app()->currentLocale() == 'en')
+            <div class="text">
+                <p class="text__black">SUBMISSION ISSN </p>
+                <p class="text__blue">FOR SCIENTIFIC JOURNALS</p>
+            </div>
+        @endif
     </div>
 
     <div class="mySlides fade">
         <div class="numbertext">3 / 3</div>
-        <img src="{{asset('carousel_images/3.png')}}" style="width:100%">
-        <div class="text">
-            <p class="text__black">Сайты на OJS для научных журналов</p>
-            <p class="text__blue"> от разработки до поддержки</p>
-        </div>
+        <img src="{{asset('carousel_images/3.png')}}" style="width:100%; height: 600px">
+        @if(app()->currentLocale() == 'ru')
+            <div class="text">
+                <p class="text__black">Сайты на OJS для научных журналов</p>
+                <p class="text__blue"> от разработки до поддержки</p>
+            </div>
+        @elseif(app()->currentLocale() == 'kz')
+            <div class="text">
+                <p class="text__black">ҒЫЛЫМИ ЖУРНАЛДАРҒА АРНАЛҒАН </p>
+                <p class="text__blue">OJS САЙТТАРЫН
+                    ДАМЫТУ ЖӘНЕ  ҚОЛДАУ</p>
+            </div>
+        @elseif(app()->currentLocale() == 'en')
+            <div class="text">
+                <p class="text__black">OJS FOR SCIENTIFIC JOURNALS</p>
+                <p class="text__blue">FROM DEVELOPMENT TO MAINTENANCE</p>
+            </div>
+        @endif
+
     </div>
 
     <a class="prev" onclick="plusSlides(-1)">❮</a>

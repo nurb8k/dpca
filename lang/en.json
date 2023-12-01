@@ -1,5 +1,21 @@
 {
-  "Register": "Register",
+  "register": "Register",
   "Login": ":Login",
-  "logout": "Logout"
+  "logout": "Logout",
+  "DOI_REQUESTS": "DOI Requests",
+  "RESOURCES": "Resources",
+  "NEWS": "News",
+  "SCIENTIFIC_JOURNALS": "Scientific Journals",
+  "CONTACTS": "Contacts",
+  "CONTACT_US": "Contact us",
+  "HOW_WE_HELP": "How We Help",
+  "BENEFIT": "Our advantages",
+  "TURNKEY_DEVELOPMENT": "Turnkey Development",
+  "COST": "Pricing",
+  "DIGITAL_PUBLICATIONS_SUBSCRIBE": "Subscribe Digital Publications on Central Asia",
+  "OJS_FOR_SCIENTIFIC_JOURNALS": "OJS for Scientific Journals",
+  "FROM_DEVELOPMENT_TO_MAINTENANCE": "From Development to Maintenance",
+  "SUBMISSION_ISSN": "Submission ISSN for Scientific Journals",
+  "home": "Home page",
+  "footer.all_rights_reserved": "All rights reserved"
 }
