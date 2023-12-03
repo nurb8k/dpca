@@ -2,7 +2,7 @@
 
 @section('content')
     <section class="page-title-block">
-        <img class="page-title-img" src="{{url('public/images/how_we_help.png')}}" alt="">
+        <img class="page-title-img" src="{{asset('images/how_we_help.png')}}" alt="">
         <h1 class="page-title"><span class="text-blue">РАЗРАБОТКА</span> ПОД КЛЮЧ</h1>
     </section>
 

@@ -10,7 +10,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <!-- Fonts -->
+    <!-- sonts -->
 
     <!-- CSS files -->
     <link rel="stylesheet" href="{{asset('css/main.css')}}">
@@ -33,7 +33,7 @@
             <a class="navbar__head--link" href="#">{{__('RESOURCES')}}</a>
             <a class="navbar__head--link" href="{{route('news.index')}}">{{__('NEWS')}}</a>
             <a class="navbar__head--link" href="#">{{__('SCIENTIFIC_JOURNALS')}}</a>
-            <a class="navbar__head--link" href="#">{{__('CONTACTS')}}</a>
+            <a class="navbar__head--link" href="{{route('contacts')}}">{{__('CONTACTS')}}</a>
         </div>
         <div class="navbar__head--contact">
             <div class="navbar__head--contact--phone">

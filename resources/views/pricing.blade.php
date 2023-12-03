@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
     <section class="page-title-block">
-        <img class="page-title-img" src="{{url('public/images/how_we_help.png')}}" alt="">
+        <img class="page-title-img" src="{{asset('images/how_we_help.png')}}" alt="">
         <h1 class="page-title">СТОИМОИСТЬ</h1>
     </section>
     <main class="container cabinet-container">

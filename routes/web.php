@@ -3,11 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth2\AuthController;
 use App\Http\Controllers\News\NewsController;
-
+use App\Http\Controllers\QrCodeController;
 
 Route::get('/', function () {
     return redirect(app()->getLocale()); // <-- Handles redirect with no locale to the current locale
 });
+
+
+Route::get('/generate-qrcode', [QrCodeController::class, 'generateQrCode']);
 
 Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setlocale')->group(function () {
     Route::get('/', function () {
@@ -34,6 +37,10 @@ Route::prefix('{locale}')->where(['locale' => '[a-zA-Z]{2}'])->middleware('setlo
     Route::get('/advantage', function () {
         return view('advantage');
     })->name('advantage');
+
+    Route::get('/contacts',function (){
+       return view('contacts');
+    })->name('contacts');
 
     Route::get('/developing', function () {
         return view('developing');
