@@ -1,95 +1,269 @@
 @extends('layouts.layout')
 @section('content')
-
     <section class="page-title-block">
         <img class="page-title-img" src="{{asset('images/how_we_help.png')}}" alt="">
-        <h1 class="page-title"><span class="text-blue">КАК</span> МЫ ПОМОГАЕМ</h1>
+        <h1 class="page-title">{{__('HOW_WE_HELP')}}</h1>
     </section>
 
-    <main class="container cabinet-container">
-        <div class="cabinet-menu-block">
+    @if(app()->currentLocale() == 'ru')
+        <main class="container cabinet-container">
+            <div class="cabinet-menu-block">
 
-            <div class="cabinet-menu-mobile js-cabinet-menu-btn">
-                <div class="cabinet-menu-mobile-x"></div>
+                <div class="cabinet-menu-mobile js-cabinet-menu-btn">
+                    <div class="cabinet-menu-mobile-x"></div>
+                </div>
+
+                <ul class="cabinet-menu js-cabinet-menu">
+                    <li class="cabinet-menu-item cabinet-menu-item__active">
+                        <a href="#"  data-tab="tab1">Цифровая версия журнала</a>
+                    </li>
+                    <li class="cabinet-menu-item ">
+                        <a href="#" data-tab="tab2">Индексирование журнала</a>
+                    </li>
+                    <li class="cabinet-menu-item">
+                        <a href="#"  data-tab="tab3">Техническая поддержка</a>
+                    </li>
+                    <li class="cabinet-menu-item">
+                        <a href="#" data-tab="tab4">Поддержка авторов</a>
+                    </li>
+                    <li class="cabinet-menu-item">
+                        <a href="#"  data-tab="tab5">Продвижение</a>
+                    </li>
+                </ul>
             </div>
 
-            <ul class="cabinet-menu js-cabinet-menu">
-                <li class="cabinet-menu-item cabinet-menu-item__active">
-                    <a href="#"  data-tab="tab1">Цифровая версия журнала</a>
-                </li>
-                <li class="cabinet-menu-item ">
-                    <a href="#" data-tab="tab2">Индексирование журнала</a>
-                </li>
-                <li class="cabinet-menu-item">
-                    <a href="#"  data-tab="tab3">Техническая поддержка</a>
-                </li>
-                <li class="cabinet-menu-item">
-                    <a href="#" data-tab="tab4">Поддержка авторов</a>
-                </li>
-                <li class="cabinet-menu-item">
-                    <a href="#"  data-tab="tab5">Продвижение</a>
-                </li>
-            </ul>
-        </div>
+            <section class="cabinet-info cabinet-section tab-content d-block" id="tab1">
+                <h2 class="cabinet-section-title">Цифровая версия журнала</h2>
+                <p class="section-text">Наша компания предлагает полноценную цифровую версию вашего журнала, которая имеет множество преимуществ по сравнению с традиционным печатным издание: <br><br>
+                    Доступность: Цифровая версия журнала обеспечивает широкую доступность статей для авторов и читателей со всего мира. Авторы могут отправлять свои статьи на рассмотрение без необходимости отправлять их по почте, а читатели могут просматривать и загружать статьи в любое время и в любом месте.<br><br>
+                    Удобство: Цифровая версия журнала позволяет авторам и рецензентам удобно работать с документами в электронном формате, без необходимости печатать или сканировать их. Кроме того, электронные версии статей облегчают процесс редактирования и обработки текста.<br><br>
+                    Быстрота: Цифровая версия журнала ускоряет процесс публикации и рецензирования статей. Авторы могут отправлять свои статьи на рассмотрение непосредственно на платформе, а рецензенты могут просматривать и оценивать статьи онлайн, что существенно сокращает время, необходимое для оценки статей.<br><br>
+                    Улучшенный процесс рецензирования: Цифровая версия журнала позволяет авторам и рецензентам работать в режиме онлайн, что облегчает взаимодействие между ними. Рецензенты могут быстро и удобно просматривать и комментировать статьи в режиме онлайн, а авторы могут быстро получать обратную связь.<br><br>
+                    Эффективный поиск: Цифровая версия журнала предоставляет удобный поиск по ключевым словам и авторам, что облегчает поиск нужных статей для читателей. Кроме того, метаданные, размещенные на нашем портале, облегчают поиск и индексацию статей в международных базах данных.<br><br>
+                    Безопасность и сохранность: Цифровая версия журнала обеспечивает сохранность и безопасность данных, в том числе защиту от копирования и несанкционированного доступа к материалам.<br><br>
+                    Максимальная доступность и широкий охват аудитории: электронная версия журнала доступна в любое время из любой точки мира с помощью Интернета, что значительно расширяет аудиторию журнала. Это увеличивает видимость публикаций авторов и повышает вероятность их цитирования. Рецензенты могут также рецензировать статьи удаленно, что экономит время и сокращает расходы на печать и доставку бумажных версий журнала.<br><br>
+                </p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab2">
+                <h2 class="cabinet-section-title">Индексирование журнала</h2>
+                <p class="section-text">Мы обеспечиваем максимальную видимость и доступность научных журналов на мировой арене путем индексации в рейтинговых базах данных и поисковых системах, а также регистрации DOI через Crossref.<br><br>
+                    Наша компания гарантирует успешную индексацию научных журналов в мировых базах данных и поисковых системах, а также регистрацию DOI через Crossref. Мы работаем с ключевыми индексирующими службами, такими как Scopus, Web of Science, DOAJ, PubMed, и другими, а также обеспечиваем полную поддержку регистрации DOI в Crossref. Это позволяет нашим клиентам получить наивысший уровень видимости и доступности для своих научных журналов, привлечь новых авторов и расширить аудиторию.<br><br>
+                    Мы также обеспечиваем консультации по индексации журнала и регистрации DOI, в том числе помогаем в сборе и отправке материалов, необходимых для успешной регистрации в базах данных и Crossref.<br><br>
+                </p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab3">
+                <h2 class="cabinet-section-title">Техническая поддержка</h2>
+                <p class="section-text">Гарантируем оперативное реагирование на все запросы, связанные с техническими вопросами, а также предоставляем круглосуточную поддержку для быстрого и эффективного решения любых проблем.<br><br>
+                    Наша команда экспертов имеет богатый опыт в работе с журналами на базе OJS и других платформ, что позволяет предоставлять качественную помощь в настройке и оптимизации работы журнала. Также предоставляем обучение персонала, которое поможет вашей команде эффективно использовать функциональные возможности нашей платформы для наиболее успешной работы журнала.<br><br>
+                    Кроме того, готовы ответить на любые вопросы, связанные с регистрацией журнала в международных базах данных, а также предоставляем поддержку в обработке метаданных для регистрации DOI в Crossref и других агрегаторах. Уверены, что высококвалифицированная техническая поддержка поможет вашему журналу успешно развиваться и процветать.</p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab4">
+                <h2 class="cabinet-section-title">Поддержка авторов</h2>
+                <p class="section-text">Мы предоставляем широкий спектр услуг для поддержки авторов на всех этапах публикации их научных работ. Наши опытные специалисты готовы оказать помощь в следующих областях:
+                    Редактирование и корректировка научных работ: наши опытные редакторы могут помочь авторам улучшить качество и читаемость научных работ. Они могут проверить текст на наличие орфографических и грамматических ошибок, улучшить структуру и оформление, а также внести необходимые изменения для повышения четкости и понятности текста.<br><br>
+                    Консультации по вопросам форматирования и структурирования научных работ: мы можем помочь авторам правильно оформить свою научную работу в соответствии с международными стандартами. Наши консультанты могут помочь вам правильно структурировать текст, оформить таблицы и графики, выбрать правильный формат цитирования и т.д.<br><br>
+                    Помощь в подготовке рукописи к публикации: наши специалисты могут помочь авторам подготовить свою научную работу к публикации. Мы можем помочь вам выбрать наиболее подходящий журнал для публикации вашей работы, помочь с подготовкой списка литературы и оформлением аннотации.<br><br>
+                    Поддержка в вопросах Open Access: мы можем помочь авторам опубликовать свою научную работу с открытым доступом (Open Access). Наши специалисты могут помочь вам выбрать правильную лицензию, разместить вашу работу в соответствующем репозитории и улучшить ее видимость в онлайн-среде.<br><br>
+                    Консультации по вопросам авторского права и лицензирования научных работ: мы можем помочь авторам разобраться в вопросах, связанных с авторским правом и лицензированием научных работ. Наши специалисты могут помочь вам выбрать правильную лицензию, решить вопросы, связанные с авторским правом, и защитить вашу интеллектуальную собственность.<br><br>
+                </p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab5">
+                <h2 class="cabinet-section-title">Продвижение</h2>
+                <p class="section-text">Мы также предоставляем услуги продвижения научных журналов в мировых базах данных, таких как Scopus,
+                    Web of Science, DOAJ и других. Мы используем передовые технологии и стратегии для улучшения видимости и
+                    рейтинга журнала, что позволяет привлекать больше авторов и читателей. Кроме того, мы оказываем помощь в процессе подачи заявок на индексацию в
+                    мировых базах данных,
+                    а также в решении любых возникающих проблем и технических вопросов, связанных с индексацией и
+                    продвижением журнала. Наша команда специалистов занимается продвижением журналов уже на протяжении многих лет и
+                    имеет обширный опыт работы с научными журналами различных дисциплин и уровней сложности. Мы готовы помочь вашему журналу достичь высоких результатов и привлечь внимание международной научной общественности.
+                </p>
+            </section>
+            <div class="presentation-section">
+                <div class="presentation__header">
+                    <h3 class="presentation__title">Презентация</h3>
+                    <p class="presentation__text">Ключевая информация о нашей платформе одним файлом. Удобно распечатать или отправить по электронной почте.</p>
+                </div>
+                <div class="presentation__download">
 
-        <section class="cabinet-info cabinet-section tab-content d-block" id="tab1">
-            <h2 class="cabinet-section-title">Цифровая версия журнала</h2>
-            <p class="section-text">Наша компания предлагает полноценную цифровую версию вашего журнала, которая имеет множество преимуществ по сравнению с традиционным печатным издание: <br><br>
-                Доступность: Цифровая версия журнала обеспечивает широкую доступность статей для авторов и читателей со всего мира. Авторы могут отправлять свои статьи на рассмотрение без необходимости отправлять их по почте, а читатели могут просматривать и загружать статьи в любое время и в любом месте.<br><br>
-                Удобство: Цифровая версия журнала позволяет авторам и рецензентам удобно работать с документами в электронном формате, без необходимости печатать или сканировать их. Кроме того, электронные версии статей облегчают процесс редактирования и обработки текста.<br><br>
-                Быстрота: Цифровая версия журнала ускоряет процесс публикации и рецензирования статей. Авторы могут отправлять свои статьи на рассмотрение непосредственно на платформе, а рецензенты могут просматривать и оценивать статьи онлайн, что существенно сокращает время, необходимое для оценки статей.<br><br>
-                Улучшенный процесс рецензирования: Цифровая версия журнала позволяет авторам и рецензентам работать в режиме онлайн, что облегчает взаимодействие между ними. Рецензенты могут быстро и удобно просматривать и комментировать статьи в режиме онлайн, а авторы могут быстро получать обратную связь.<br><br>
-                Эффективный поиск: Цифровая версия журнала предоставляет удобный поиск по ключевым словам и авторам, что облегчает поиск нужных статей для читателей. Кроме того, метаданные, размещенные на нашем портале, облегчают поиск и индексацию статей в международных базах данных.<br><br>
-                Безопасность и сохранность: Цифровая версия журнала обеспечивает сохранность и безопасность данных, в том числе защиту от копирования и несанкционированного доступа к материалам.<br><br>
-                Максимальная доступность и широкий охват аудитории: электронная версия журнала доступна в любое время из любой точки мира с помощью Интернета, что значительно расширяет аудиторию журнала. Это увеличивает видимость публикаций авторов и повышает вероятность их цитирования. Рецензенты могут также рецензировать статьи удаленно, что экономит время и сокращает расходы на печать и доставку бумажных версий журнала.<br><br>
-            </p>
-        </section>
-        <section class="cabinet-info cabinet-section tab-content d-none" id="tab2">
-            <h2 class="cabinet-section-title">Индексирование журнала</h2>
-            <p class="section-text">Мы обеспечиваем максимальную видимость и доступность научных журналов на мировой арене путем индексации в рейтинговых базах данных и поисковых системах, а также регистрации DOI через Crossref.<br><br>
-                Наша компания гарантирует успешную индексацию научных журналов в мировых базах данных и поисковых системах, а также регистрацию DOI через Crossref. Мы работаем с ключевыми индексирующими службами, такими как Scopus, Web of Science, DOAJ, PubMed, и другими, а также обеспечиваем полную поддержку регистрации DOI в Crossref. Это позволяет нашим клиентам получить наивысший уровень видимости и доступности для своих научных журналов, привлечь новых авторов и расширить аудиторию.<br><br>
-                Мы также обеспечиваем консультации по индексации журнала и регистрации DOI, в том числе помогаем в сборе и отправке материалов, необходимых для успешной регистрации в базах данных и Crossref.<br><br>
-            </p>
-        </section>
-        <section class="cabinet-info cabinet-section tab-content d-none" id="tab3">
-            <h2 class="cabinet-section-title">Техническая поддержка</h2>
-            <p class="section-text">Гарантируем оперативное реагирование на все запросы, связанные с техническими вопросами, а также предоставляем круглосуточную поддержку для быстрого и эффективного решения любых проблем.<br><br>
-                Наша команда экспертов имеет богатый опыт в работе с журналами на базе OJS и других платформ, что позволяет предоставлять качественную помощь в настройке и оптимизации работы журнала. Также предоставляем обучение персонала, которое поможет вашей команде эффективно использовать функциональные возможности нашей платформы для наиболее успешной работы журнала.<br><br>
-                Кроме того, готовы ответить на любые вопросы, связанные с регистрацией журнала в международных базах данных, а также предоставляем поддержку в обработке метаданных для регистрации DOI в Crossref и других агрегаторах. Уверены, что высококвалифицированная техническая поддержка поможет вашему журналу успешно развиваться и процветать.</p>
-        </section>
-        <section class="cabinet-info cabinet-section tab-content d-none" id="tab4">
-            <h2 class="cabinet-section-title">Поддержка авторов</h2>
-            <p class="section-text">Мы предоставляем широкий спектр услуг для поддержки авторов на всех этапах публикации их научных работ. Наши опытные специалисты готовы оказать помощь в следующих областях:
-                Редактирование и корректировка научных работ: наши опытные редакторы могут помочь авторам улучшить качество и читаемость научных работ. Они могут проверить текст на наличие орфографических и грамматических ошибок, улучшить структуру и оформление, а также внести необходимые изменения для повышения четкости и понятности текста.<br><br>
-                Консультации по вопросам форматирования и структурирования научных работ: мы можем помочь авторам правильно оформить свою научную работу в соответствии с международными стандартами. Наши консультанты могут помочь вам правильно структурировать текст, оформить таблицы и графики, выбрать правильный формат цитирования и т.д.<br><br>
-                Помощь в подготовке рукописи к публикации: наши специалисты могут помочь авторам подготовить свою научную работу к публикации. Мы можем помочь вам выбрать наиболее подходящий журнал для публикации вашей работы, помочь с подготовкой списка литературы и оформлением аннотации.<br><br>
-                Поддержка в вопросах Open Access: мы можем помочь авторам опубликовать свою научную работу с открытым доступом (Open Access). Наши специалисты могут помочь вам выбрать правильную лицензию, разместить вашу работу в соответствующем репозитории и улучшить ее видимость в онлайн-среде.<br><br>
-                Консультации по вопросам авторского права и лицензирования научных работ: мы можем помочь авторам разобраться в вопросах, связанных с авторским правом и лицензированием научных работ. Наши специалисты могут помочь вам выбрать правильную лицензию, решить вопросы, связанные с авторским правом, и защитить вашу интеллектуальную собственность.<br><br>
-            </p>
-        </section>
-        <section class="cabinet-info cabinet-section tab-content d-none" id="tab5">
-            <h2 class="cabinet-section-title">Продвижение</h2>
-            <p class="section-text">Мы также предоставляем услуги продвижения научных журналов в мировых базах данных, таких как Scopus,
-                Web of Science, DOAJ и других. Мы используем передовые технологии и стратегии для улучшения видимости и
-                рейтинга журнала, что позволяет привлекать больше авторов и читателей. Кроме того, мы оказываем помощь в процессе подачи заявок на индексацию в
-                мировых базах данных,
-                а также в решении любых возникающих проблем и технических вопросов, связанных с индексацией и
-                продвижением журнала. Наша команда специалистов занимается продвижением журналов уже на протяжении многих лет и
-                имеет обширный опыт работы с научными журналами различных дисциплин и уровней сложности. Мы готовы помочь вашему журналу достичь высоких результатов и привлечь внимание международной научной общественности.
-            </p>
-        </section>
-        <div class="presentation-section">
-            <div class="presentation__header">
-                <h3 class="presentation__title">Презентация</h3>
-                <p class="presentation__text">Ключевая информация о нашей платформе одним файлом. Удобно распечатать или отправить по электронной почте.</p>
+                    <form action="{{asset('files/DPCA presentation.pdf')}}" target="_blank">
+                        <button type="submit" class="presentation__header--button">
+                            {{__('presentation.download')}}
+                        </button>
+                    </form>
+                </div>
             </div>
-            <div class="presentation__download">
-                <button class="presentation__download__btn">
-                    Скачать презентацию
-                </button>
+        </main>
+    @elseif(app()->currentLocale() == 'en')
+        <main class="container cabinet-container">
+            <div class="cabinet-menu-block">
+
+                <div class="cabinet-menu-mobile js-cabinet-menu-btn">
+                    <div class="cabinet-menu-mobile-x"></div>
+                </div>
+
+                <ul class="cabinet-menu js-cabinet-menu">
+                    <li class="cabinet-menu-item cabinet-menu-item__active">
+                        <a href="#"  data-tab="tab1">Digital version of the magazine</a>
+                    </li>
+                    <li class="cabinet-menu-item ">
+                        <a href="#" data-tab="tab2">Journal indexing</a>
+                    </li>
+                    <li class="cabinet-menu-item">
+                        <a href="#"  data-tab="tab3">Technical support</a>
+                    </li>
+                    <li class="cabinet-menu-item">
+                        <a href="#" data-tab="tab4">Support for authors</a>
+                    </li>
+                    <li class="cabinet-menu-item">
+                        <a href="#"  data-tab="tab5">Promotion</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </main>
+
+            <section class="cabinet-info cabinet-section tab-content d-block" id="tab1">
+                <h2 class="cabinet-section-title">Digital version of the magazine</h2>
+                <p class="section-text">Our company offers a full-fledged digital version of your magazine, which has many advantages over a traditional print edition: <br><br>
+                    Accessibility: The digital version of the journal provides wide accessibility of articles for authors and readers from all over the world. Authors can submit their articles for review without having to send them by mail, and readers can view and download articles anytime and anywhere.<br><br>
+                    Convenience: The digital version of the journal allows authors and reviewers to conveniently work with documents in electronic format, without having to print or scan them. In addition, electronic versions of articles facilitate the process of editing and text processing.<br><br>
+                    Speed: The digital version of the journal speeds up the process of publishing and reviewing articles. Authors can submit their articles for review directly on the platform, and reviewers can view and rate articles online, which significantly reduces the time required to evaluate articles.<br><br>
+                    Improved review process: The digital version of the journal allows authors and reviewers to work online, which facilitates interaction between them. Reviewers can quickly and conveniently review and comment on articles online, and authors can quickly receive feedback.<br><br>
+                    Efficient search: The digital version of the magazine provides a convenient search by keywords and authors, which makes it easier for readers to find the right articles. In addition, the metadata posted on our portal facilitates the search and indexing of articles in international databases.<br><br>
+                    Security and safety: The digital version of the journal ensures the safety and security of data, including protection against copying and unauthorized access to materials.<br><br>
+                    Maximum accessibility and wide audience coverage: the electronic version of the magazine is available at any time from anywhere in the world via the Internet, which significantly expands the magazine's audience. This increases the visibility of the authors' publications and increases the likelihood of their citation. Reviewers can also review articles remotely, which saves time and reduces the cost of printing and shipping paper versions of the journal.<br><br></p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab2">
+                <h2 class="cabinet-section-title">Indexing the journal</h2>
+                <p class="section-text">We ensure maximum visibility and accessibility of scientific journals on the world stage through indexing in rating databases and search engines, as well as registration of DOI through Crossref.<br><br>
+                    Our company guarantees successful indexing of scientific journals in global databases and search engines, as well as registration of DOI through Crossref. We work with key indexing services such as Scopus, Web of Science, DOAJ, PubMed, and others, and also provide full support for DOI registration in Crossref. This allows our clients to get the highest level of visibility and accessibility for their scientific journals, attract new authors and expand the audience.<br><br>
+                    We also provide consultations on journal indexing and DOI registration, including assistance in collecting and sending materials necessary for successful registration in databases and Crossref.<br><br></p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab3">
+                <h2 class="cabinet-section-title">Technical support</h2>
+                <p class="section-text">We guarantee prompt response to all requests related to technical issues, as well as provide round-the-clock support for quick and effective solutions to any problems.<br><br>
+                    Our team of experts has extensive experience in working with magazines based on iOS and other platforms, which allows us to provide high-quality assistance in setting up and optimizing the work of the magazine. We also provide staff training that will help your team effectively use the functionality of our platform for the most successful work of the magazine.<br><br>
+                    In addition, we are ready to answer any questions related to the registration of the journal in international databases, and also provide support in the processing of metadata for the registration of DOI in Crossref and other aggregators. We are confident that highly qualified technical support will help your magazine to develop and flourish successfully.</p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab4">
+                <h2 class="cabinet-section-title">Support for authors</h2>
+                <p class="section-text">We provide a wide range of services to support authors at all stages of publishing their scientific papers. Our experienced specialists are ready to provide assistance in the following areas:
+                    Editing and correcting scientific papers: Our experienced editors can help authors improve the quality and readability of scientific papers. They can check the text for spelling and grammatical errors, improve the structure and design, and make the necessary changes to improve the clarity and clarity of the text.<br><br>
+                    Consultations on formatting and structuring scientific papers: we can help authors to properly arrange their scientific work in accordance with international standards. Our consultants can help you structure the text correctly, arrange tables and graphs, choose the correct citation format, etc.<br><br>
+                    Assistance in preparing a manuscript for publication: our experts can help authors prepare their scientific work for publication. We can help you choose the most suitable journal for publishing your work, help with the preparation of a list of references and the design of an abstract.<br><br>
+                    Open Access Support: We can help authors to publish their scientific work with Open Access. Our experts can help you choose the right license, place your work in the appropriate repository and improve its visibility in the online environment.<br><br>
+                    Consultations on copyright and licensing of scientific works: We can help authors understand issues related to copyright and licensing of scientific works. Our experts can help you choose the right license, resolve copyright issues, and protect your intellectual property.<br><br></p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab5">
+                <h2 class="cabinet-section-title">Promotion</h2>
+                <p class="section-text">We also provide services for the promotion of scientific journals in global databases such as Scopus,
+                    Web of Science, DOAJ and others. We use advanced technologies and strategies to improve the visibility and
+                    ranking of the magazine, which allows us to attract more authors and readers. In addition, we provide assistance in the application process for indexing in
+                    global databases,
+                    as well as in solving any problems and technical issues related to indexing and
+                    promotion of the magazine. Our team of specialists has been promoting magazines for many years and
+                    He has extensive experience working with scientific journals of various disciplines and levels of complexity. We are ready to help your journal achieve high results and attract the attention of the international scientific community.</p>
+            </section>
+            <div class="presentation-section">
+                <div class="presentation__header">
+                    <h3 class="presentation__title">Presentation</h3>
+                    <p class="presentation__text">Key information about our platform in one file. Convenient to print or email.</p>
+                </div>
+                <div class="presentation__download">
+                    <form action="{{asset('files/DPCA presentation.pdf')}}" target="_blank">
+                        <button type="submit" class="presentation__header--button">
+                            {{__('presentation.download')}}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    @elseif(app()->currentLocale() == 'kz')
+        <main class="container cabinet-container">
+            <div class="cabinet-menu-block">
+
+                <div class="cabinet-menu-mobile js-cabinet-menu-btn">
+                    <div class="cabinet-menu-mobile-x"></div>
+                </div>
+
+                <ul class="cabinet-menu js-cabinet-menu">
+                    <li class="cabinet-menu-item cabinet-menu-item__active">
+                        <a href="#"  data-tab="tab1">Цифровая версия журнала</a>
+                    </li>
+                    <li class="cabinet-menu-item ">
+                        <a href="#" data-tab="tab2">Индексирование журнала</a>
+                    </li>
+                    <li class="cabinet-menu-item">
+                        <a href="#"  data-tab="tab3">Техническая поддержка</a>
+                    </li>
+                    <li class="cabinet-menu-item">
+                        <a href="#" data-tab="tab4">Поддержка авторов</a>
+                    </li>
+                    <li class="cabinet-menu-item">
+                        <a href="#"  data-tab="tab5">Продвижение</a>
+                    </li>
+                </ul>
+            </div>
+
+            <section class="cabinet-info cabinet-section tab-content d-block" id="tab1">
+                <h2 class="cabinet-section-title">Цифровая версия журнала</h2>
+                <p class="section-text">Наша компания предлагает полноценную цифровую версию вашего журнала, которая имеет множество преимуществ по сравнению с традиционным печатным издание: <br><br>
+                    Доступность: Цифровая версия журнала обеспечивает широкую доступность статей для авторов и читателей со всего мира. Авторы могут отправлять свои статьи на рассмотрение без необходимости отправлять их по почте, а читатели могут просматривать и загружать статьи в любое время и в любом месте.<br><br>
+                    Удобство: Цифровая версия журнала позволяет авторам и рецензентам удобно работать с документами в электронном формате, без необходимости печатать или сканировать их. Кроме того, электронные версии статей облегчают процесс редактирования и обработки текста.<br><br>
+                    Быстрота: Цифровая версия журнала ускоряет процесс публикации и рецензирования статей. Авторы могут отправлять свои статьи на рассмотрение непосредственно на платформе, а рецензенты могут просматривать и оценивать статьи онлайн, что существенно сокращает время, необходимое для оценки статей.<br><br>
+                    Улучшенный процесс рецензирования: Цифровая версия журнала позволяет авторам и рецензентам работать в режиме онлайн, что облегчает взаимодействие между ними. Рецензенты могут быстро и удобно просматривать и комментировать статьи в режиме онлайн, а авторы могут быстро получать обратную связь.<br><br>
+                    Эффективный поиск: Цифровая версия журнала предоставляет удобный поиск по ключевым словам и авторам, что облегчает поиск нужных статей для читателей. Кроме того, метаданные, размещенные на нашем портале, облегчают поиск и индексацию статей в международных базах данных.<br><br>
+                    Безопасность и сохранность: Цифровая версия журнала обеспечивает сохранность и безопасность данных, в том числе защиту от копирования и несанкционированного доступа к материалам.<br><br>
+                    Максимальная доступность и широкий охват аудитории: электронная версия журнала доступна в любое время из любой точки мира с помощью Интернета, что значительно расширяет аудиторию журнала. Это увеличивает видимость публикаций авторов и повышает вероятность их цитирования. Рецензенты могут также рецензировать статьи удаленно, что экономит время и сокращает расходы на печать и доставку бумажных версий журнала.<br><br>
+                </p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab2">
+                <h2 class="cabinet-section-title">Индексирование журнала</h2>
+                <p class="section-text">Мы обеспечиваем максимальную видимость и доступность научных журналов на мировой арене путем индексации в рейтинговых базах данных и поисковых системах, а также регистрации DOI через Crossref.<br><br>
+                    Наша компания гарантирует успешную индексацию научных журналов в мировых базах данных и поисковых системах, а также регистрацию DOI через Crossref. Мы работаем с ключевыми индексирующими службами, такими как Scopus, Web of Science, DOAJ, PubMed, и другими, а также обеспечиваем полную поддержку регистрации DOI в Crossref. Это позволяет нашим клиентам получить наивысший уровень видимости и доступности для своих научных журналов, привлечь новых авторов и расширить аудиторию.<br><br>
+                    Мы также обеспечиваем консультации по индексации журнала и регистрации DOI, в том числе помогаем в сборе и отправке материалов, необходимых для успешной регистрации в базах данных и Crossref.<br><br>
+                </p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab3">
+                <h2 class="cabinet-section-title">Техническая поддержка</h2>
+                <p class="section-text">Гарантируем оперативное реагирование на все запросы, связанные с техническими вопросами, а также предоставляем круглосуточную поддержку для быстрого и эффективного решения любых проблем.<br><br>
+                    Наша команда экспертов имеет богатый опыт в работе с журналами на базе OJS и других платформ, что позволяет предоставлять качественную помощь в настройке и оптимизации работы журнала. Также предоставляем обучение персонала, которое поможет вашей команде эффективно использовать функциональные возможности нашей платформы для наиболее успешной работы журнала.<br><br>
+                    Кроме того, готовы ответить на любые вопросы, связанные с регистрацией журнала в международных базах данных, а также предоставляем поддержку в обработке метаданных для регистрации DOI в Crossref и других агрегаторах. Уверены, что высококвалифицированная техническая поддержка поможет вашему журналу успешно развиваться и процветать.</p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab4">
+                <h2 class="cabinet-section-title">Поддержка авторов</h2>
+                <p class="section-text">Мы предоставляем широкий спектр услуг для поддержки авторов на всех этапах публикации их научных работ. Наши опытные специалисты готовы оказать помощь в следующих областях:
+                    Редактирование и корректировка научных работ: наши опытные редакторы могут помочь авторам улучшить качество и читаемость научных работ. Они могут проверить текст на наличие орфографических и грамматических ошибок, улучшить структуру и оформление, а также внести необходимые изменения для повышения четкости и понятности текста.<br><br>
+                    Консультации по вопросам форматирования и структурирования научных работ: мы можем помочь авторам правильно оформить свою научную работу в соответствии с международными стандартами. Наши консультанты могут помочь вам правильно структурировать текст, оформить таблицы и графики, выбрать правильный формат цитирования и т.д.<br><br>
+                    Помощь в подготовке рукописи к публикации: наши специалисты могут помочь авторам подготовить свою научную работу к публикации. Мы можем помочь вам выбрать наиболее подходящий журнал для публикации вашей работы, помочь с подготовкой списка литературы и оформлением аннотации.<br><br>
+                    Поддержка в вопросах Open Access: мы можем помочь авторам опубликовать свою научную работу с открытым доступом (Open Access). Наши специалисты могут помочь вам выбрать правильную лицензию, разместить вашу работу в соответствующем репозитории и улучшить ее видимость в онлайн-среде.<br><br>
+                    Консультации по вопросам авторского права и лицензирования научных работ: мы можем помочь авторам разобраться в вопросах, связанных с авторским правом и лицензированием научных работ. Наши специалисты могут помочь вам выбрать правильную лицензию, решить вопросы, связанные с авторским правом, и защитить вашу интеллектуальную собственность.<br><br>
+                </p>
+            </section>
+            <section class="cabinet-info cabinet-section tab-content d-none" id="tab5">
+                <h2 class="cabinet-section-title">Продвижение</h2>
+                <p class="section-text">Мы также предоставляем услуги продвижения научных журналов в мировых базах данных, таких как Scopus,
+                    Web of Science, DOAJ и других. Мы используем передовые технологии и стратегии для улучшения видимости и
+                    рейтинга журнала, что позволяет привлекать больше авторов и читателей. Кроме того, мы оказываем помощь в процессе подачи заявок на индексацию в
+                    мировых базах данных,
+                    а также в решении любых возникающих проблем и технических вопросов, связанных с индексацией и
+                    продвижением журнала. Наша команда специалистов занимается продвижением журналов уже на протяжении многих лет и
+                    имеет обширный опыт работы с научными журналами различных дисциплин и уровней сложности. Мы готовы помочь вашему журналу достичь высоких результатов и привлечь внимание международной научной общественности.
+                </p>
+            </section>
+            <div class="presentation-section">
+                <div class="presentation__header">
+                    <h3 class="presentation__title">Презентация</h3>
+                    <p class="presentation__text">Ключевая информация о нашей платформе одним файлом. Удобно распечатать или отправить по электронной почте.</p>
+                </div>
+                <div class="presentation__download">
+                    <button class="presentation__download__btn">
+                        Скачать презентацию
+                    </button>
+                </div>
+            </div>
+        </main>
+    @endif
+
+
     <script>
         const tabs = document.querySelectorAll(".cabinet-menu-item a");
         const tabContents = document.querySelectorAll(".tab-content");

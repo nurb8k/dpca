@@ -17,5 +17,26 @@
   "FROM_DEVELOPMENT_TO_MAINTENANCE": "From Development to Maintenance",
   "SUBMISSION_ISSN": "Submission ISSN for Scientific Journals",
   "home": "Home page",
-  "footer.all_rights_reserved": "All rights reserved"
+  "footer.all_rights_reserved": "All rights reserved",
+  "hwh.desc": "Transparency in the editorial process: OJS allows the editor-in-chief to easily track all stages of the journal's production. He can...",
+  "more": "More",
+  "turnkey.desc": "Transparency in the editorial process: OJS allows the editor-in-chief to easily track all stages of the journal's production. He can...",
+  "cost.desc": "Transparency in the editorial process: OJS allows the editor-in-chief to easily track all stages of the journal's production. He can...",
+  "ben.desc": "Transparency in the editorial process: OJS allows the editor-in-chief to easily track all stages of the journal's production. He can...",
+  "presentation": "Presentation",
+  "presentation.desc": "Key information about our platform in one file. Convenient to print or email.",
+  "presentation.download": "Download presentation",
+  "apply": "Submit an application",
+  "apply.text": "for a site evaluation",
+  "services": "We offer the following services:",
+  "presentation.text": "Key information about our platform in one file. It is convenient to print or send by e-mail.",
+  "turnkey": "Turnkey",
+  "development": "Development",
+  "apply.message" : "Your application successfully send! Thank you!",
+  "your.name": "Your name",
+  "your.email": "Your email",
+    "your.message": "Your message",
+  "your.phone": "Your phone",
+  "dpca.text": " <span class=\"text-blue bold\"> DPCA\n  </span> (Digital Publishing Central Asia) is a company <br> located in Almaty, Kazakhstan, which provides digital services <br> to support scientific  publications in Central Asian countries.  <br>The company was created to simplify  the process of publishing   <br> scientific articles and journals and ensure their compliance with <br> international requirements"
 }
+

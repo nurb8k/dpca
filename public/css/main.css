@@ -353,10 +353,18 @@ ul {
     background-color: #DEEBF2;
     display: flex;
     padding: 29px 51px;
+    justify-content: space-between;
 }
 .presentation__download {
     display: flex;
-
+}
+.alert-success {
+    padding: 20px;
+    color: #1e7e34;
+}
+.alert-danger {
+    padding: 20px 0;
+    color: #b0212d;
 }
 .presentation__download__btn {
     background-color: var(--color-active);

@@ -15,7 +15,7 @@
         @if(app()->currentLocale() == 'ru')
             <div class="text">
                 <p class="text__black">поддержка</p>
-                <p class="text__blue">цифровых публикации</p>
+                <p class="text__blue">цифровых публикаций</p>
                 <p class="text__black">по центральной Азии</p>
             </div>
         @elseif(app()->currentLocale() == 'kz')
@@ -83,50 +83,50 @@
     <div class="services-all-items">
         <div class="service-item">
             <div class="service-head">
-                <p class="service-head-text">Как мы помогаем</p>
+                <p class="service-head-text">{{__('HOW_WE_HELP')}}</p>
                 <img src="{{asset('images/service_images/service1.png')}}" alt="" class="service-head-img">
             </div>
             <div class="service-end">
                 <p class="service-end-text">
-                    Прозрачность редакционного процесса: OJS позволяет главному редактору легко отслеживать все этапы подготовки выпуска журнала. Он может...
+                    {{__('hwh.desc')}}
                 </p>
-                <a href="{{route('help.index')}}" class="service-end-link">Подробнее</a>
+                <a href="{{route('help.index')}}" class="service-end-link">{{__('more')}}</a>
             </div>
         </div>
         <div class="service-item">
             <div class="service-head">
-                <p class="service-head-text">Преимущество</p>
+                <p class="service-head-text">{{__('BENEFIT')}}</p>
                 <img src="{{asset('images/service_images/img.png')}}" alt="" class="service-head-img">
             </div>
             <div class="service-end">
                 <p class="service-end-text">
-                    Прозрачность редакционного процесса: OJS позволяет главному редактору легко отслеживать все этапы подготовки выпуска журнала. Он может...
+                    {{__('ben.desc')}}
                 </p>
-                <a href="{{route('advantage')}}" class="service-end-link">Подробнее</a>
+                <a href="{{route('advantage')}}" class="service-end-link">{{__('more')}}</a>
             </div>
         </div>
         <div class="service-item">
             <div class="service-head">
-                <p class="service-head-text">Разработка под ключ</p>
+                <p class="service-head-text">{{__('TURNKEY_DEVELOPMENT')}}</p>
                 <img src="{{asset('images/service_images/img_1.png')}}" alt="" class="service-head-img">
             </div>
             <div class="service-end">
                 <p class="service-end-text">
-                    Прозрачность редакционного процесса: OJS позволяет главному редактору легко отслеживать все этапы подготовки выпуска журнала. Он может...
+                    {{__('turnkey.desc')}}
                 </p>
-                <a href="{{route('developing')}}" class="service-end-link">Подробнее</a>
+                <a href="{{route('developing')}}" class="service-end-link">{{__('more')}}</a>
             </div>
         </div>
         <div class="service-item">
             <div class="service-head">
-                <p class="service-head-text">Стоимость</p>
+                <p class="service-head-text">{{__('COST')}}</p>
                 <img src="{{asset('images/service_images/img_2.png')}}" alt="" class="service-head-img">
             </div>
             <div class="service-end">
                 <p class="service-end-text">
-                    Прозрачность редакционного процесса: OJS позволяет главному редактору легко отслеживать все этапы подготовки выпуска журнала. Он может...
+                    {{__('cost.desc')}}
                 </p>
-                <a href="{{route('pricing')}}" class="service-end-link">Подробнее</a>
+                <a href="{{route('pricing')}}" class="service-end-link">{{__('more')}}</a>
             </div>
         </div>
     </div>
@@ -134,22 +134,24 @@
 
 <section class="our-service">
     <div class="presentation">
-        <h3 class="presentation__header-title">Презентация</h3>
-        <p class="presentation__header--text">Ключевая информация о нашей платформе одним файлом. Удобно распечатать или отправить по электронной почте.</p>
-        <button class="presentation__header--button">
-            Скачать презентацию
-        </button>
+        <h3 class="presentation__header-title">{{__('presentation')}}</h3>
+        <p class="presentation__header--text">{{__('presentation.desc')}}</p>
+        <form action="{{asset('files/DPCA presentation.pdf')}}" target="_blank">
+            <button type="submit" class="presentation__header--button">
+                {{__('presentation.download')}}
+            </button>
+        </form>
     </div>
-    <div class="request">
+    <a href="{{route('contacts')}}" class="request">
         <img class="request__logo" src="{{asset('images/request.png')}}" alt="icon">
-        <h3 class="request__title">ПОДАТЬ ЗАЯВКУ</h3>
-        <p class="request__text"> на экспертизу сайта</p>
-    </div>
+        <h3 class="request__title">{{__('apply')}}</h3>
+        <p class="request__text">{{__('apply.text')}}</p>
+    </a>
 </section>
 
 <section class="offer-services">
     <div class="offer-services__title">
-        Мы предлагаем следующие сервисы:
+{{__('services')}}
     </div>
     <div class="slider">
         <div class="slide-track">
@@ -178,14 +180,9 @@
 </section>
 
 <section class="news-recommend">
-    <div class="news-recommend-title text-center">Новости</div>
+    <div class="news-recommend-title text-center">{{__('NEWS')}}</div>
     <div class="news-recommend-items">
 
-        <div class="news-recommend-item">
-            <img src="{{ asset('images/news_details_images/rec1.png')}}" alt="" class="news-recommend-item-img">
-            <div class="news-recommend-item-date">11 Декабря 2022</div>
-            <a href="#" class="news-recommend-item-title">Crossref усиливает контроль за качеством метаданных для научных изданий: что это означает для издателей в Центральной Азии</a>
-        </div>
         <div class="news-recommend-item">
             <img src="{{ asset('images/news_details_images/rec2.png')}}" alt="" class="news-recommend-item-img">
             <div class="news-recommend-item-date">4 Декабря 2022</div>
@@ -203,7 +200,7 @@
         </div>
 
     </div>
-    <a href="{{route('news.index')}}" class="news-recommend-btn">Все новости
+    <a href="#" class="news-recommend-btn">Все новости
         <svg class="news-recommend-arrow" viewBox="0 0 22 12" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M21 1L11 11L1 1" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>

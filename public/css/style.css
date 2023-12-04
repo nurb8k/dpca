@@ -994,6 +994,7 @@ footer {
 }
 
 .presentation__header--button {
+    cursor: pointer;
     background-color: #006EFF;
     color: white;
     height: 40px;
@@ -1022,6 +1023,10 @@ footer {
     padding: 38px 22px 38px 22px;
     color: white;
 }
+.request:hover {
+    background: #013c85;
+}
+
 
 .request__title {
     font-size: 20px;

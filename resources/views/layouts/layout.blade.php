@@ -214,9 +214,7 @@
             <div class="footer__head--contact--email">
                 <img class="footer__head--email--icon" src="{{asset('images/email_logo.png')}}" alt="phone">
                 <div class="footer__head--contacts">
-                    <p>info@dpca.kz</p>
-                    <br>
-                    <p>help@dpca.kz</p>
+                    <p>dpca2023@gmail.kz</p>
                 </div>
             </div>
         </div>
